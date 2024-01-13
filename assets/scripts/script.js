@@ -1,5 +1,4 @@
-const hamMenu = document.querySelector('.nav-toggle');
-
+const navToggle = document.querySelector('.nav-toggle');
 let menuContent = null;
 
 const displayNav = () => {
@@ -10,7 +9,7 @@ const displayNav = () => {
     } else {
         // Content is not displayed, create and display it
         menuContent = document.createElement('div');
-        menuContent.classList.add('menu-content');
+        menuContent.className = 'menu-content';
 
         let navLinks = document.querySelectorAll('.nav-link');
 
@@ -24,7 +23,7 @@ const displayNav = () => {
     }
 };
 
-hamMenu.addEventListener('click', displayNav);
+navToggle.addEventListener('click', displayNav);
 
 
 
