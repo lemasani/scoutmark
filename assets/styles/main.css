@@ -205,22 +205,17 @@ nav{
     position: relative;
     width: 100%;
     height: 80vh;
-    background-image: url(../images/hero-background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
-.hero::before{
+/* .hero::before{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80vh;
-    background: rgba(29, 29, 29, 0.1); 
-
-}
+    background: rgba(24, 24, 24, 0.425); 
+    z-index: 1;
+} */
 
 .hero-container{
     position: relative;
@@ -231,17 +226,28 @@ nav{
     height: 80vh;
 
 }
-/* .hero-container::before{
-    
 
-} */
-
-.hero-logo{
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid yellow; */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
+    z-index: 1;
 }
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
 
 
 .logo-text{
@@ -377,6 +383,29 @@ nav{
     animation-delay: 1s;
 
 }
+.arrow-down{
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 20px;
+    animation-name: arrowDown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    cursor: pointer;
+    z-index: 1;
+}
+.arrow-down i{
+    font-size: 30px;
+    color: #fff;
+}
+@keyframes arrowDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 .about{
     position: relative;
@@ -393,7 +422,7 @@ nav{
     text-align: center;
 }
 .section-title{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 40px;
     font-family: 'League Spartan', sans-serif;
     width: 25%;

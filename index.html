@@ -41,8 +41,14 @@
     <main>
         <section class="hero" id="hero">
             <div class="hero-container">
-                <div class="logo-text" data-aos="fade-down" data-aos-easing="linear"
-                data-aos-duration="1500">
+
+                <div class="hero-overlay"></div>
+                <!-- hero background video -->
+                <video autoplay muted loop id="hero-video">
+                    <source src="assets/images/hero-background.mp4" type="video/mp4">
+                </video>
+
+                <div class="logo-text">
                     <h1>
                         Scout
                         <strong>Ma</strong>rk
@@ -58,6 +64,9 @@
                         <li>Logo design</li>
                         <li>Client interaction</li>
                     </ul>
+                </div>
+                <div class="arrow-down">
+                    <i class="bi bi-arrow-down-circle"></i>
                 </div>
                 <!-- <div class="illustration">
                     <img src="assets/images/illustration-1.png" alt="">

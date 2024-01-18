@@ -83,3 +83,10 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+
+
+document.querySelector('.arrow-down')
+.addEventListener('click', function() {
+    window.scrollBy(0, 200); // Change 100 to the number of pixels you want to scroll
+});
