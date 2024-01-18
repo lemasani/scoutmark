@@ -1,3 +1,47 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* google fonts */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
 
@@ -7,6 +51,10 @@
     box-sizing: border-box;
 }
 
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
 /* header styles */
 header{
     position: relative;
@@ -157,22 +205,17 @@ nav{
     position: relative;
     width: 100%;
     height: 80vh;
-    background-image: url(../images/hero-background.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
 }
-.hero::before{
+/* .hero::before{
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 80vh;
-    background: rgba(29, 29, 29, 0.1); 
-
-}
+    background: rgba(24, 24, 24, 0.425); 
+    z-index: 1;
+} */
 
 .hero-container{
     position: relative;
@@ -183,17 +226,28 @@ nav{
     height: 80vh;
 
 }
-/* .hero-container::before{
-    
 
-} */
-
-.hero-logo{
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    /* border: 1px solid yellow; */
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust color and opacity as needed */
+    z-index: 1;
 }
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
 
 
 .logo-text{
@@ -329,6 +383,29 @@ nav{
     animation-delay: 1s;
 
 }
+.arrow-down{
+    transform: translateX(-50%);
+    position: absolute;
+    bottom: 20px;
+    animation-name: arrowDown;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    cursor: pointer;
+    z-index: 1;
+}
+.arrow-down i{
+    font-size: 30px;
+    color: #fff;
+}
+@keyframes arrowDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
 
 .about{
     position: relative;
@@ -345,7 +422,7 @@ nav{
     text-align: center;
 }
 .section-title{
-    margin-top: 40px;
+    margin-top: 20px;
     font-size: 40px;
     font-family: 'League Spartan', sans-serif;
     width: 25%;
