@@ -407,6 +407,37 @@ nav{
     }
 }
 
+/* discover section */
+.discover{
+    height: fit-content;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+}
+
+.discover-container{
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.discover-image, .discover-text{
+    width: 50%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.discover-text h2{
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 3em;
+    line-height: 1.2;
+    letter-spacing: 1px;
+
+}
+.discover-image img{
+    max-width: 100%;
+    height: 300px;
+}
+
+
 .about{
     position: relative;
     width: 100%;
