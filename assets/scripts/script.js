@@ -86,7 +86,9 @@ window.onload = function() {
 
 
 
-document.querySelector('.arrow-down')
-.addEventListener('click', function() {
-    window.scrollBy(0, 200); // Change 100 to the number of pixels you want to scroll
+document.querySelector('.arrow-down').addEventListener('click', function() {
+    window.scrollTo({
+        top: window.scrollY + 200, // Change 200 to the number of pixels you want to scroll
+        behavior: 'smooth'
+    });
 });
