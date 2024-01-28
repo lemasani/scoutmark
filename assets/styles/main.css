@@ -442,7 +442,86 @@ nav{
     height: 300px;
 }
 
+/* why choose us */
+.whyChooseUs{
+    position: relative;
+    width: 100%;
+    background-color: #39326B;
+}
 
+.whyTitle{
+    color: #fff;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.why-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.why {
+    position: relative;
+    flex: 1;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    min-height: 400px;
+    color: #fff;
+    font-family: 'League Spartan', sans-serif;
+    transition: all 0.3s ease;
+}
+.why::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 0.5%);
+    opacity: 0.5; /* Adjust as needed */
+    z-index: 1;
+}
+.why h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    z-index: 1;
+}
+.why:hover h5 {
+    top: 40%; /* Adjust as needed */
+    transition: top 0.3s ease;
+}
+.why p {
+    position: absolute;
+    top: 60%; /* Adjust as needed */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.3em;
+    font-weight: lighter;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+.why:hover p {
+    opacity: 1;
+}
+
+.why img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* about section style  */
 .about{
     position: relative;
     width: 100%;
@@ -645,7 +724,7 @@ nav{
         grid-area: unset;
     }
 
-
+    /* discover section */
     .discover-container{
         display: flex;
         flex-direction: column;
@@ -658,5 +737,39 @@ nav{
     .discover-image img{
         max-width: 100%;
         height: 350px;
+    }
+
+    /* why seciton */
+
+    .why-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .whyTitle{
+        font-size: 24px;
+    }
+
+    .why {
+        width: 100%;
+        margin: auto;
+    }
+
+    .why:last-child {
+        margin-bottom: 0;
+    }
+    .why h5 {
+        font-size: 2em; /* Adjust as needed */
+    }
+
+    .why p {
+        font-size: 1.1em; /* Adjust as needed */
+    }
+    why:hover h5 {
+        top: 10%; /* Adjust as needed */
+        transition: top 0.3s ease;
+    }
+
+    .why p {
+        top: 60%; /* Adjust as needed */
     }
 }
